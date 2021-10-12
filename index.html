@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>BIBI's Archive</title>
+    <link rel="icon"
+          type="image/png"
+          href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body style="background-image: url('background1.png'); background-repeat: no-repeat; ">
+    <div class="btn">
+        <span class="fas fa-bars"></span>
+    </div>
+    <nav class="sidebar">
+        <div class="text">
+            القائمة الرائيسية
+        </div>
+        <ul>
+            <li class="active"><a href="#">الصفحة الرائيسية</a></li>
+            <li>
+                <a href="#" class="feat-btn">
+                    المكتبة
+                    <span class="fas fa-caret-down first"></span>
+                </a>
+                <ul class="feat-show">
+                    <li><a href="#">عقيدة</a></li>
+                    <li><a href="#">فقه مالكي</a></li>
+                    <li><a href="#">أحاديث نبوية</a></li>
+                    <li><a href="#">سيرة نبوية</a></li>
+                    <li><a href="#">التجويد  و القراءات</a></li>
+                    <li><a href="#">قصص الأنبئاء</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="serv-btn">
+                    العقيدة السليمة
+                    <span class="fas fa-caret-down second"></span>
+                </a>
+                <ul class="serv-show">
+                    <li><a href="#">التوحيد</a></li>
+                    <li><a href="#">أسماء الله الحسنى</a></li>
+                    <li><a href="#">صفات الله تبارك و تعالى</a></li>
+                    <li><a href="#">الإيمان و الكفر</a></li>
+                    <li><a href="#">الأنبياء و الرسل</a></li>
+                    <li><a href="#">الولاء و البراء</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="sec-btn">
+                    الفرق
+                    <span class="fas fa-caret-down third"></span>
+                </a>
+                <ul class="sec-show">
+                    <li><a href="#">شرح حديث الفرق</a></li>
+                    <li><a href="#">أهل البدع</a></li>
+                    <li><a href="#">الأشاعرة</a></li>
+                    <li><a href="#">الماتريدية</a></li>
+                    <li><a href="#">المعتزلة</a></li>
+                    <li><a href="#">الجهمية</a></li>
+                </ul>
+            </li>
+            <li><a href="#">التواصل</a></li>
+        </ul>
+    </nav>
+    
+    <script>
+        $('.btn').click(function () {
+            $(this).toggleClass("click");
+            $('.sidebar').toggleClass("show");
+        });
+        $('.feat-btn').click(function () {
+            $('nav ul .feat-show').toggleClass("show");
+            $('nav ul .first').toggleClass("rotate");
+        });
+        $('.serv-btn').click(function () {
+            $('nav ul .serv-show').toggleClass("show1");
+            $('nav ul .second').toggleClass("rotate");
+        });
+        $('.sec-btn').click(function () {
+            $('nav ul .sec-show').toggleClass("show2");
+            $('nav ul .third').toggleClass("rotate");
+        });
+        $('nav ul li').click(function () {
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+    </script>
+</body>
+</html>
